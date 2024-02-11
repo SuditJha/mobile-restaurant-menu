@@ -1,3 +1,80 @@
 body {
     margin: 0;
+    font-family: 'Smythe', system-ui;
+    user-select: none;
 } 
+
+h1 {
+    margin-bottom: 5px; 
+    font-weight: 700;
+    font-size: 28px;
+}
+
+h1, h2, h4, h5 {
+    margin: 0;
+}
+
+
+p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.section-app-container {
+    margin: 0 auto;
+    max-width: 400px;
+    
+}
+
+.section-hero {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 50px 20px;
+    background-image: url("images/burger3.png");
+    background-size: cover;
+    color: #fff;
+}
+.menu-list {
+    /* background: lightblue; */
+    /* padding: 20px 40px 20px 20px; */
+}
+
+.menu-item {
+    border-bottom: 1px solid #D2D2D2;
+    padding: 20px 40px 40px 20px;
+    margin-bottom: 30px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item-description{
+    display: flex;
+}
+
+.emoji {
+    font-size: 60px;
+    gap: 20px;
+    
+}
+
+.description{
+    color: #3C3C3C;
+}
+
+.description p{
+    color: #8B8B8B;    
+    margin: 6px 0 14px;
+}
+
+.addItem {
+    margin: 0;
+    background-color: #fff;
+    border: 1.5px solid #DEDEDE;
+    border-radius: 100%;
+    padding: 10px 15px;
+    color: #3C3C3C;
+}
+
+.addItem:hover{
+    background-color: #DEDEDE;
+}
