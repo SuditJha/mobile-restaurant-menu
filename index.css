@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Smythe', system-ui;
+    color: #3C3C3C;
     user-select: none;
 } 
 
@@ -10,7 +11,7 @@ h1 {
     font-size: 28px;
 }
 
-h1, h2, h4, h5 {
+h1, h2, h3, h4, h5 {
     margin: 0;
 }
 
@@ -26,6 +27,11 @@ p {
     
 }
 
+.section-app-container-inner {
+    width: 90%;
+    margin: 0 auto;
+}
+/* Hero Section */
 .section-hero {
     margin: 0;
     margin-bottom: 20px;
@@ -34,14 +40,10 @@ p {
     background-size: cover;
     color: #fff;
 }
-.menu-list {
-    /* background: lightblue; */
-    /* padding: 20px 40px 20px 20px; */
-}
-
+/* Menu List*/
 .menu-item {
     border-bottom: 1px solid #D2D2D2;
-    padding: 20px 40px 40px 20px;
+    padding: 10px 20px 30px 10px;
     margin-bottom: 30px ;
     display: flex;
     justify-content: space-between;
@@ -52,21 +54,19 @@ p {
 }
 
 .emoji {
-    font-size: 60px;
-    gap: 20px;
+    font-size: 40px;
+    margin-right: 20px; 
+    padding: 0;
     
 }
 
-.description{
-    color: #3C3C3C;
-}
 
-.description p{
+.ingredients{
     color: #8B8B8B;    
     margin: 6px 0 14px;
 }
 
-.addItem {
+.add-item-btn {
     margin: 0;
     background-color: #fff;
     border: 1.5px solid #DEDEDE;
@@ -75,6 +75,47 @@ p {
     color: #3C3C3C;
 }
 
-.addItem:hover{
+.add-item-btn:hover{
     background-color: #DEDEDE;
+}
+/* Order List */
+.order-list-container {
+    text-align: center;
+    display: none;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    
+}
+
+.order-item-description {
+    display: flex;
+    gap:12px;
+    
+}
+
+.remove-item-btn {
+    background-color: #fff; 
+    border: none;
+    color: #BBBBBB;
+    font-size: 8px;
+    padding-top: 10px; 
+}
+
+.remove-item-btn:hover{
+    color: #8B8B8B;
+}
+
+.complete-order-btn {
+    width: 100%;
+    padding: 10px 10px;
+    background: #16DB99;
+    border: none;
+    color: #fff;
+    font-family: Verdana;
+    margin: 0 0 20px;
+    border-radius: 4px;
 }

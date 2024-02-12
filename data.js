@@ -1,8 +1,12 @@
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+
+// console.log(uuidv4());
 const menuArray = [
     {
         name: "Pizza",
         ingredients: ["pepperoni", "mushrom", "mozarella"],
-        id: 0,
+        uuid: uuidv4(),
+        id:1,
         price: 14,
         emoji: "🍕"
     },
@@ -11,15 +15,19 @@ const menuArray = [
         ingredients: ["beef", "cheese", "lettuce"],
         price: 12,
         emoji: "🍔",
-        id: 1
+        uuid: uuidv4(),
+        id:2
     },
         {
         name: "Beer",
         ingredients: ["grain, hops, yeast, water"],
         price: 12,
         emoji: "🍺",
-        id: 2
+        uuid: uuidv4(),
+        id:3
     }
 ]
 
-export default menuArray
+const orderArray = []
+
+export  { menuArray, orderArray }
