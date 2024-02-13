@@ -19,19 +19,19 @@ function handleAddItemEvent(e){
         orderArray.push(menuItem)
         renderOrders(orderArray)
     }
-    console.log(orderArray)
+    // console.log(orderArray)
 }
 
 function handleRemoveItemEvent(e){
-    console.log(e.target.id)
+    // console.log(e.target.id)
     const removedItem = orderArray.filter((orderItem) => {
         return orderItem.uuid === e.target.id
     })[0]
     const removedItemIndex = orderArray.indexOf(removedItem)
-    console.log(removedItem)
-    console.log(removedItemIndex)
+    // console.log(removedItem)
+    // console.log(removedItemIndex)
     orderArray.splice(removedItemIndex, 1)
-    console.log(orderArray)
+    // console.log(orderArray)
     renderOrders(orderArray)
 }
 
