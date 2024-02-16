@@ -1,5 +1,10 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jimmy's Restaurant</title>
        <link rel="stylesheet" href="index.css">
        <link rel="preconnect" href="https://fonts.googleapis.com">
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,21 +28,44 @@
                 
                 <!--Pre-Checkout Order Section -->
                 <section class="order-list-container" id="order-list-container">
-                    
-                        <!-- <h2>Your Order</h2>
-                        <div id="order-item-list">
-                            <div class="order-item">
-                                <div class="order-item-description">
-                                    <h4>Pizza</h4>
-                                    <button class="remove-item-btn" id="remove-item-btn">REMOVE</button>
-                                </div>
-                                <h4>$20</h4>
-                            </div>
-                        </div>
-                        <div class="order-item-list"><h3>Total Price:</h3><h3>Price</h3></div>
-                        <button class="complete-order-btn" id="complete-order-btn">Complete Order</button> -->
                 </section>
                 
+                <!-- Checkout Payment Form -->
+                <section class="payment-modal" id="payment-modal">
+                    
+                    <form class="payment-modal-inner" id="payment-modal-inner">
+                        <h2>Enter card details</h2>
+                        <input 
+                        type="text" 
+                        maxlength="36" minlength="4"
+                        placeholder="Enter your name"
+                        name="customer-name"
+                        id="customer-name"
+                        required
+                        >
+                        <input 
+                        type="number" 
+                        max="999999999999" min="100000000000"
+                        placeholder="Enter 12 digit card number"
+                        name="card-number"
+                        id="card-number"
+                        required
+                        >
+                        <input 
+                        type="password" 
+                        maxlength="3" minlength="3"
+                        placeholder="Enter CVV"
+                        name="cvv"
+                        id="cvv"
+                        required
+                        >
+                        <button class="complete-order-btn" id="complete-payment-btn"  type="submit">Pay</button>
+                    </form>
+                </section>
+                
+                <!-- Order Complete State -->
+                <section id="order-complete">
+                </section>
             </section>
         </section>
         
