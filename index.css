@@ -21,6 +21,16 @@ p {
     font-size: 14px;
 }
 
+input {
+    padding: 10px 20px;
+    /* width: 100%; */
+    margin: 0 0 15px;
+    font-family: Verdana;
+    color: #757575;
+    border: 1px solid #757575;
+    border-radius: 5px;
+}
+
 .section-app-container {
     margin: 0 auto;
     max-width: 400px;
@@ -116,8 +126,39 @@ p {
     border: none;
     color: #fff;
     font-family: Verdana;
-    margin: 0 0 20px;
-    border-radius: 4px;
+    margin: 20px 0 20px;
+    border-radius: 2px;
+}
+
+/* Payment Modal */
+
+.payment-modal {
+    display: none;
+    width:300px;
+    margin: 0 auto;
+    padding: 30px 10px 10px;
+    position: fixed;
+    top: 25%;
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: 0px 0px 40px 0 #adb5bd;
+}
+
+.payment-modal-inner {
+    text-align: center;
+}
+.payment-modal-inner input{
+    width: 240px;
+}
+.payment-modal-inner h2{
+    margin: 0 0 24px;
+}
+
+.order-complete {
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: #ECFDF5;
+    padding: 40px 20px;
 }
 
 /* Utility */
