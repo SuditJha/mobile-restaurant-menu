@@ -36,7 +36,6 @@ function handleRemoveItemOrCompleteOrderEvent(e){
 // Handle Complete Order Event
     if(e.target.id === 'complete-order-btn'){
         // console.log(e.target.id)
-        document.getElementById("payment-modal").style.display = 'block'
         completeOrderPayment()
     }
 }
@@ -64,8 +63,8 @@ function renderOrders(ordersArray){
 }
 
 function completeOrderPayment(){
+    document.getElementById("payment-modal").style.display = 'block'
     const paymentFormEl = document.getElementById('payment-modal-inner')
-
     document.getElementById("customer-name").addEventListener("keypress", function(evt) {
         const keyPressed = evt.key;
         const isNumber = /^\d$/.test(keyPressed);
@@ -85,7 +84,9 @@ function completeOrderPayment(){
     paymentFormEl.addEventListener("submit", function(e){
         e.preventDefault()
         const formData = new FormData(paymentFormEl)
-        orderComplete(formData.get('customer-name'))
+        const customerName = formData.get('customer-name')
+        console.log(customerName)
+        orderComplete(customerName)
         paymentFormEl.reset()
     })
     // console.log(paymentFormEl)
@@ -114,23 +115,25 @@ function getOrderTotal(orderArray){
 
 
 function orderComplete(name){
-    document.getElementById("payment-modal").style.display = 'none'
-    orderList.style.display = 'none'
-
-    document.getElementById("order-complete").innerHTML = `
-        <div class="order-complete">
-            <h2>Thanks, ${name}! Your order is on its way!</h2>
-        </div>
-    `
-    setTimeout(function(){
-        document.getElementById("order-complete").innerHTML = ''
-        let orderArrayLength = orderArray.length 
-        for(let i = 0; i < orderArrayLength; i++){
-            orderArray.pop()
-        }
-        
-    }, 5000)
     console.log(name)
+    if(name){
+        document.getElementById("payment-modal").style.display = 'none'
+        orderList.style.display = 'none'
+        document.getElementById("order-complete").innerHTML = `
+            <div class="order-complete">
+                <h2>Thanks, ${name}! Your order is on its way!</h2>
+            </div>
+        `
+        setTimeout(function(){
+            document.getElementById("order-complete").innerHTML = ''
+            let orderArrayLength = orderArray.length 
+            for(let i = 0; i < orderArrayLength; i++){
+                orderArray.pop()
+            }
+            
+        }, 2000)
+    }
+    // console.log(name)
 }
 
 // Default Menu Function Called on Load
